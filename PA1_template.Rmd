@@ -20,6 +20,6 @@ output:
 
 ## Imputing missing values
 
-
+Just a test
 
 ## Are there differences in activity patterns between weekdays and weekends?
