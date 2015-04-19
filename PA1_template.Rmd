@@ -31,7 +31,7 @@ mean_steps <- mean(total_steps$steps)
 median_steps <- median(total_steps$steps)
 summary(total_steps$steps)
 ```
-The mean of the total number of steps taken per day is `r mean_steps` and median is `r median_steps`.
+The mean of the total number of steps taken per day is **`r mean_steps`** and median is **`r median_steps`**.
 
 
 ## What is the average daily activity pattern?
@@ -45,8 +45,9 @@ plot(avg_steps$steps ~ avg_steps$interval, type="l", xlab="5-minute Interval",
 # Extracting the 5-minute interval that contains the maximum number of steps on average.
 max_interval <- avg_steps$interval[which.max(avg_steps$steps)]
 ```
+
 The 5-minute interval that contains the maximum number of steps on average across 
-all the days in the dataset is the interval starting at `r max_interval`
+all the days in the dataset is the interval starting at **`r max_interval`**.
 
 
 ## Imputing missing values
@@ -79,10 +80,10 @@ summary(new_total_steps$steps)
 mean_impact <- new_mean_steps - mean_steps
 median_impact <- new_median_steps - median_steps
 ```
-The impact of inputting missing data on the estimates of the total daily number of steps is
-that there is an increase in the values of the mean and the median. In fact, by replacing the 
-missing values, there is an increase of `r mean_impact` for the mean and an increase of 
-`r median_impact` for the median.
+
+The impact of substituting the missing data by the estimates of the average daily number of steps is
+that there is an increase in the values of the mean and the median. In fact, the mean increased by
+**`r mean_impact`** and the median increased by **`r median_impact`**.
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
@@ -105,7 +106,8 @@ library("lattice")
 xyplot(steps ~ interval | dayofweek, type="l", data=new_avg_steps, xlab="Interval", 
 ylab="Number of Steps", layout=c(1,2), main="Weekends and Weekdays Activity Patterns Comparison")
 ```
+
 The activity patterns for both weekdays and weekends seem to follow almost the same trend but 
-there exist differences between them. This can be seen from the "Weekends and Weekdays Activity Patterns Comparison"
+there exist differences between them. This can be seen from the **"Weekends and Weekdays Activity Patterns Comparison"**
 graph that is plotted above. 
 
